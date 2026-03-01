@@ -1,0 +1,105 @@
+/* Illustration Styles */
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.champagne-glasses {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.glasses-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Glass Styles */
+.glass-outline {
+    fill: none;
+    stroke: #6b8e6b;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.glass-bowl {
+    fill: #f5f1e8;
+    stroke: #d4c5a9;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.glass-liquid {
+    fill: #f5e6d3;
+    stroke: #d4c5a9;
+    stroke-width: 1;
+    opacity: 0.9;
+}
+
+.bubble {
+    fill: #f5e6d3;
+    opacity: 0.6;
+    animation: bubble-float 3s ease-in-out infinite;
+}
+
+.bubble:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.bubble:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes bubble-float {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+}
+
+/* Flower Styles */
+.flower-petal {
+    fill: #8b6f7d;
+    stroke: #6b5a6a;
+    stroke-width: 1;
+    opacity: 0.9;
+}
+
+.flower-center {
+    fill: #a67c7c;
+    stroke: #8b6f7d;
+    stroke-width: 1;
+}
+
+.leaf {
+    fill: #6b8e6b;
+    stroke: #5a7a5a;
+    stroke-width: 1;
+    opacity: 0.8;
+}
+
+/* Stitched effect for illustration */
+.champagne-glasses::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed rgba(107, 142, 107, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.5;
+}
+

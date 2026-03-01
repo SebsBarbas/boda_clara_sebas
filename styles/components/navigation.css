@@ -1,0 +1,74 @@
+/* Navigation Styles */
+.navigation {
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-item {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #8b6f7d;
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Dashed underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(to right,
+            transparent,
+            transparent 4px,
+            #8b6f7d 4px,
+            #8b6f7d 8px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #6b5a6a;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    background: repeating-linear-gradient(to right,
+            transparent,
+            transparent 4px,
+            #6b5a6a 4px,
+            #6b5a6a 8px);
+}
+
+/* Active state */
+.nav-link.active {
+    color: #6b5a6a;
+    font-weight: 500;
+}
+
+.nav-link.active::after {
+    opacity: 1;
+}

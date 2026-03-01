@@ -1,0 +1,6 @@
+/* Main Styles */
+@import url('components/header.css');
+@import url('components/illustration.css');
+@import url('components/navigation.css');
+@import url('components/content.css');
+@import url('responsive.css');

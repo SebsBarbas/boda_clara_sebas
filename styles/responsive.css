@@ -1,0 +1,183 @@
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .container {
+        padding: 3rem 2rem;
+    }
+
+    .date {
+        font-size: 3rem;
+    }
+
+    .name {
+        font-size: 3.5rem;
+    }
+
+    .separator {
+        font-size: 2.5rem;
+    }
+
+    .champagne-glasses {
+        max-width: 400px;
+    }
+
+    .nav-link {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 3rem;
+    }
+
+    .content-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .container {
+        padding: 4rem 3rem;
+    }
+
+    .header {
+        margin-bottom: 4rem;
+    }
+
+    .date {
+        font-size: 3.5rem;
+    }
+
+    .name {
+        font-size: 4rem;
+    }
+
+    .separator {
+        font-size: 3rem;
+    }
+
+    .champagne-glasses {
+        max-width: 500px;
+    }
+
+    .illustration {
+        margin: 4rem 0;
+    }
+
+    .navigation {
+        margin: 4rem 0;
+    }
+
+    .nav-list {
+        gap: 2rem;
+    }
+
+    .nav-link {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 4rem;
+    }
+
+    .content-section h2 {
+        font-size: 3rem;
+    }
+
+    .content-section p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+    }
+
+    .date {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .name::before,
+    .name::after {
+        display: none; /* Hide decorative elements on small screens */
+    }
+
+    .separator {
+        font-size: 1.5rem;
+        margin: 0.3rem 0;
+    }
+
+    .illustration {
+        margin: 2rem 0;
+        padding: 1rem 0;
+    }
+
+    .champagne-glasses {
+        max-width: 250px;
+    }
+
+    .navigation {
+        margin: 2rem 0;
+        padding: 1rem 0;
+    }
+
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .content {
+        margin-top: 2rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .date {
+        font-size: 1.8rem;
+    }
+
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .champagne-glasses {
+        max-width: 200px;
+    }
+}
+
