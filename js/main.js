@@ -17,29 +17,29 @@ document.addEventListener('DOMContentLoaded', function() {
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     const contentSections = document.querySelectorAll('.content-section');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetSection = this.getAttribute('data-section');
-            
+
             // Remove active class from all links and sections
             navLinks.forEach(l => l.classList.remove('active'));
             contentSections.forEach(s => s.classList.remove('active'));
-            
+
             // Add active class to clicked link
             this.classList.add('active');
-            
+
             // Show corresponding section
             const section = document.getElementById(targetSection);
             if (section) {
                 section.classList.add('active');
-                
+
                 // Smooth scroll to section
-                section.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
@@ -76,8 +76,8 @@ function initAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';

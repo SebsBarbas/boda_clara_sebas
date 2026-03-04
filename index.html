@@ -13,6 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="preload" href="styles/static/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/static/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/static/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+    <link rel="stylesheet" href="styles/static//bulma-carousel.min.css">
+    <link rel="stylesheet" href="styles/static/bulma-slider.min.css">
+    <link rel="stylesheet" href="styles/static/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
 </head>
 
 <body>
@@ -21,8 +36,8 @@
         <header class="header">
             <div class="date">26.09.26</div>
             <div class="names">
-                <div class="name">Clara</div>
-                <div class="separator">+</div>
+                <div class="name">Clara & Sebastián</div>
+                <div class="name">&</div>
                 <div class="name">Sebastián</div>
             </div>
         </header>
@@ -86,6 +101,32 @@
 
         <!-- Content Sections -->
         <main class="content">
+            <section class="hero is-small">
+                <div class="hero-body">
+                  <div class="container">
+                    <div id="results-carousel" class="carousel results-carousel">
+                      <div class="item">
+                        <!-- TODO: Replace with your research result images -->
+                        <img src="styles/images/image.png" alt="First research result visualization"
+                          style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;" loading="lazy" />
+                        <!-- TODO: Replace with description of this result -->
+                        <h2 class="subtitle has-text-centered">
+                          FindAnything produces accurate volumetric reconstructions and which can be queried with natural language
+                          prompts. Ideal for non-technical users!
+                        </h2>
+                      </div>
+                      <div class="item">
+                        <!-- Your image here -->
+                        <img src="styles/images/white-wall-background.jpg" alt="Second research result visualization" style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;" loading="lazy" />
+                        <h2 class="subtitle has-text-centered">
+                          Thanks to its design, objects are decomposed into the most indivisible parts, allowing for fine-grained
+                          queries!
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+            </section>
             <section id="llegar" class="content-section">
                 <h2>Cómo Llegar</h2>
                 <p>Información sobre cómo llegar al lugar de la boda...</p>
@@ -108,6 +149,7 @@
         </main>
     </div>
 
+    <script src="js/bulma-carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 
