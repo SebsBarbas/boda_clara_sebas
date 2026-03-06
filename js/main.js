@@ -1,15 +1,120 @@
 // Main JavaScript for Wedding Website
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize navigation
     initNavigation();
-    
+
     // Initialize smooth scrolling
     initSmoothScrolling();
-    
+
     // Initialize animations
     initAnimations();
+
+    // Initialize carousel
+    initCarousel();
 });
+
+/**
+ * Initialize carousel functionality
+ */
+function initCarousel() {
+    // #region agent log
+    console.log('[DEBUG] initCarousel called');
+    // #endregion
+
+    // Wait a bit to ensure scripts are fully loaded
+    setTimeout(() => {
+        // Try multiple ways to access bulmaCarousel
+        // #region agent log
+        const BulmaCarousel = window.bulmaCarousel || window.bulmaCarousel?.default || bulmaCarousel;
+        console.log('[DEBUG] bulmaCarousel access:', {
+            windowBulmaCarousel: typeof window.bulmaCarousel,
+            globalBulmaCarousel: typeof bulmaCarousel,
+            found: !!BulmaCarousel,
+            hasAttach: !!(BulmaCarousel && BulmaCarousel.attach),
+            BulmaCarousel: BulmaCarousel
+        });
+        // #endregion
+
+        if (!BulmaCarousel) {
+            console.error('bulmaCarousel library not found. Available globals:', Object.keys(window).filter(k => k.toLowerCase().includes('carousel') || k.toLowerCase().includes('bulma')));
+            return;
+        }
+
+        if (!BulmaCarousel.attach) {
+            console.error('bulmaCarousel.attach method not found. Available methods:', Object.keys(BulmaCarousel));
+            return;
+        }
+
+        // Find the carousel element
+        // #region agent log
+        const carouselElement = document.getElementById('results-carousel');
+        console.log('[DEBUG] Carousel element:', {
+            found: !!carouselElement,
+            children: carouselElement?.children?.length,
+            className: carouselElement?.className,
+            innerHTML: carouselElement?.innerHTML?.substring(0, 100)
+        });
+        // #endregion
+
+        if (!carouselElement) {
+            console.error('Carousel element #results-carousel not found');
+            return;
+        }
+
+        // Initialize the carousel
+        // #region agent log
+        console.log('[DEBUG] Calling BulmaCarousel.attach...');
+        // #endregion
+
+        try {
+            // Initialize with infinite loop enabled
+            const carouselInstances = BulmaCarousel.attach('#results-carousel', {
+                infinite: true,
+                loop: false, // infinite and loop are mutually exclusive
+                navigation: true,
+                pagination: true
+            });
+
+            // #region agent log
+            console.log('[DEBUG] Carousel attach result:', {
+                instances: carouselInstances,
+                length: carouselInstances?.length,
+                firstInstance: carouselInstances?.[0],
+                type: typeof carouselInstances
+            });
+            // #endregion
+
+            if (carouselInstances && carouselInstances.length > 0) {
+                console.log('✅ Carousel initialized successfully with infinite loop', carouselInstances);
+
+                // #region agent log
+                // Check DOM after initialization
+                setTimeout(() => {
+                    const afterInit = document.getElementById('results-carousel');
+                    const sliderWrapper = afterInit?.querySelector('.slider');
+                    console.log('[DEBUG] DOM after init:', {
+                        children: afterInit?.children?.length,
+                        hasSliderWrapper: !!sliderWrapper,
+                        sliderChildren: sliderWrapper?.children?.length
+                    });
+                }, 200);
+                // #endregion
+            } else {
+                console.warn('⚠️ Carousel attach returned no instances');
+            }
+        } catch (error) {
+            // #region agent log
+            console.error('[DEBUG] Carousel error:', {
+                message: error.message,
+                stack: error.stack,
+                name: error.name
+            });
+            // #endregion
+            console.error('❌ Error initializing carousel:', error);
+        }
+    }, 100);
+}
 
 /**
  * Initialize navigation functionality
@@ -85,7 +190,7 @@ function initAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe header elements
     const headerElements = document.querySelectorAll('.header > *');
     headerElements.forEach((el, index) => {
@@ -94,7 +199,7 @@ function initAnimations() {
         el.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
         observer.observe(el);
     });
-    
+
     // Observe illustration
     const illustration = document.querySelector('.illustration');
     if (illustration) {
@@ -103,7 +208,7 @@ function initAnimations() {
         illustration.style.transition = 'opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s';
         observer.observe(illustration);
     }
-    
+
     // Observe navigation items
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach((item, index) => {
@@ -121,16 +226,16 @@ function initAnimations() {
 function showSection(sectionId) {
     const section = document.getElementById(sectionId);
     const link = document.querySelector(`[data-section="${sectionId}"]`);
-    
+
     if (section && link) {
         // Remove active from all
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
         document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-        
+
         // Add active to selected
         link.classList.add('active');
         section.classList.add('active');
-        
+
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
@@ -139,4 +244,5 @@ function showSection(sectionId) {
 window.weddingWebsite = {
     showSection: showSection
 };
+
 
