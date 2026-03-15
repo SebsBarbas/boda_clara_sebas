@@ -2,6 +2,7 @@
   margin: 1rem;
   overflow: hidden;
   padding: 1.5rem;
+  justify-content: center; /* Center horizontally */
   font-size: 0;
   background: var(--background-primary);
   border-radius: var(--border-radius-lg);
@@ -14,6 +15,10 @@
 .results-carousel .item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+}
+
+.carousel-container {
+  margin-top: 1500px; /* Adjust this value to move it lower */
 }
 
 .results-carousel .item img,

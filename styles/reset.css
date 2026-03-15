@@ -17,7 +17,7 @@ body {
     /* Full-screen logo background – image is in styles/images/image.png */
     background-color: #000;
     /* fallback behind the logo */
-    background-image: url('images/white-wall-background.jpg');
+    background-image: url('images/background_boda.png');
     background-repeat: no-repeat;
     background-size: cover;
     /* scale logo to cover the viewport */

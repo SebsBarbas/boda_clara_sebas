@@ -1,4 +1,4 @@
-# Wedding Website - Victoria & Vicente
+# Wedding Website - Clara & Sebas
 
 A beautiful, responsive wedding invitation website with an embroidered fabric aesthetic.
 

@@ -46,42 +46,70 @@
             </div>
         </header>
 
-        <!-- Illustration Section: Champagne Glasses -->
-        <section class="illustration">
-            <div class="champagne-glasses" id="champagneGlasses">
-                <svg viewBox="0 0 200 200" class="glasses-svg">
-                    <!-- Left Glass -->
-                    <g class="glass left-glass">
-                        <path class="glass-outline" d="M 50 80 L 50 140 L 60 140 L 60 80 Z" />
-                        <path class="glass-bowl" d="M 40 40 Q 40 20 50 20 Q 60 20 60 40 L 60 80 L 40 80 Z" />
-                        <path class="glass-liquid" d="M 42 45 Q 42 35 50 35 Q 58 35 58 45 L 58 75 L 42 75 Z" />
-                        <circle class="bubble" cx="48" cy="50" r="2" />
-                        <circle class="bubble" cx="52" cy="55" r="1.5" />
-                        <circle class="bubble" cx="46" cy="60" r="1" />
-                    </g>
-                    <!-- Right Glass -->
-                    <g class="glass right-glass">
-                        <path class="glass-outline" d="M 140 80 L 140 140 L 150 140 L 150 80 Z" />
-                        <path class="glass-bowl" d="M 130 40 Q 130 20 140 20 Q 150 20 150 40 L 150 80 L 130 80 Z" />
-                        <path class="glass-liquid" d="M 132 45 Q 132 35 140 35 Q 148 35 148 45 L 148 75 L 132 75 Z" />
-                        <circle class="bubble" cx="138" cy="50" r="2" />
-                        <circle class="bubble" cx="142" cy="55" r="1.5" />
-                        <circle class="bubble" cx="136" cy="60" r="1" />
-                    </g>
-                    <!-- Flowers and Leaves -->
-                    <g class="flowers">
-                        <path class="flower-petal" d="M 80 30 Q 75 25 80 20 Q 85 25 80 30" />
-                        <path class="flower-petal" d="M 85 35 Q 90 30 85 25 Q 80 30 85 35" />
-                        <path class="flower-petal" d="M 90 30 Q 95 25 90 20 Q 85 25 90 30" />
-                        <path class="flower-petal" d="M 95 35 Q 100 30 95 25 Q 90 30 95 35" />
-                        <path class="flower-petal" d="M 100 30 Q 105 25 100 20 Q 95 25 100 30" />
-                        <path class="flower-petal" d="M 105 35 Q 110 30 105 25 Q 100 30 105 35" />
-                        <path class="leaf" d="M 70 40 Q 65 45 70 50 Q 75 45 70 40" />
-                        <path class="leaf" d="M 115 40 Q 120 45 115 50 Q 110 45 115 40" />
-                        <circle class="flower-center" cx="87" cy="27" r="3" />
-                        <circle class="flower-center" cx="102" cy="27" r="3" />
-                    </g>
-                </svg>
+        <section class="hero is-small">
+            <div class="hero-body">
+                <div class="carousel-container">
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item">
+                            <!-- TODO: Replace with your research result images -->
+                            <img src="styles/images/bodega3.webp" alt="First research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <!-- TODO: Replace with description of this result -->
+                            <h2 class="subtitle has-text-centered">
+                                FindAnything produces accurate volumetric reconstructions an
+                            </h2>
+                        </div>
+                        <!-- <div class="item">
+                            <img src="styles/images/exteriores-hacienda-el-rosalejo.jpeg" alt="First research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                FindAnything produces accurate volumetric reconstructions an
+                            </h2>
+                        </div> -->
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="styles/images/exteriores-hacienda-el-rosalejo-15.jpeg"
+                                alt="Second research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                Thanks to its design, objects are decomposed into the most indivisible part
+                            </h2>
+                        </div>
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="styles/images/piscina.jpeg"
+                                alt="Second research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                Thanks to its design, objects are decomposed into the most indivisible part
+                            </h2>
+                        </div>
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="styles/images/rosalejo5.jpg"
+                                alt="Second research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                Thanks to its design, objects are decomposed into the most indivisible part
+                            </h2>
+                        </div>
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img src="styles/images/patio-hacienda-el-rosalejo2.jpg"
+                                alt="Second research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                Thanks to its design, objects are decomposed into the most indivisible part
+                            </h2>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -105,37 +133,36 @@
 
         <!-- Content Sections -->
         <main class="content">
-            <section class="hero is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <div id="results-carousel" class="carousel results-carousel">
-                            <div class="item">
-                                <!-- TODO: Replace with your research result images -->
-                                <img src="styles/images/image.png" alt="First research result visualization"
-                                    style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
-                                    loading="lazy" />
-                                <!-- TODO: Replace with description of this result -->
-                                <h2 class="subtitle has-text-centered">
-                                    FindAnything produces accurate volumetric reconstructions an
-                                </h2>
-                            </div>
-                            <div class="item">
-                                <!-- Your image here -->
-                                <img src="styles/images/white-wall-background.jpg"
-                                    alt="Second research result visualization"
-                                    style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
-                                    loading="lazy" />
-                                <h2 class="subtitle has-text-centered">
-                                    Thanks to its design, objects are decomposed into the most indivisible part
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section id="llegar" class="content-section">
                 <h2>Cómo Llegar</h2>
                 <p>Información sobre cómo llegar al lugar de la boda...</p>
+                <img src="styles/images/background_boda.png" 
+                    alt="Descripción de la imagen" 
+                    style="max-width: 100%; height: auto; display: block; margin: 1rem auto;">
+                <!-- <div class="carousel-container">
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item">
+                            <-- TODO: Replace with your research result images ->
+                            <img src="styles/images/image.png" alt="First research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 0rem; display: block;"
+                                loading="lazy" />
+                            <-- TODO: Replace with description of this result ->
+                            <h2 class="subtitle has-text-centered">
+                                FindAnything produces accurate volumetric reconstructions an
+                            </h2>
+                        </div>
+                        <div class="item">
+                            <-- Your image here ->
+                            <img src="styles/images/white-wall-background.jpg"
+                                alt="Second research result visualization"
+                                style="max-height: 640px; width: auto; margin: 0 auto 1.5rem; display: block;"
+                                loading="lazy" />
+                            <h2 class="subtitle has-text-centered">
+                                Thanks to its design, objects are decomposed into the most indivisible part
+                            </h2>
+                        </div>
+                    </div>
+                </div> -->
             </section>
 
             <section id="confirmacion" class="content-section">
