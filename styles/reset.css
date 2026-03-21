@@ -19,7 +19,7 @@ body {
     /* fallback behind the logo */
     background-image: url('images/white-wall-background.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     /* scale logo to cover the viewport */
     background-position: center center;
     background-attachment: fixed;
