@@ -72,3 +72,27 @@
 .nav-link.active::after {
     opacity: 1;
 }
+
+.links-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+  }
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #5a4a42;  /* matches your body color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }

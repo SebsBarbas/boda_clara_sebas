@@ -1,3 +1,14 @@
+.section-heading {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-heading h2 {
+  font-family: 'Beth Ellen', serif; 
+  color: #5a4a42;                   
+  font-size: 2rem;
+}
+
 .results-carousel .item {
   margin: 1rem;
   overflow: hidden;
