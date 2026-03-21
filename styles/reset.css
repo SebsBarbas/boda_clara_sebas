@@ -18,21 +18,11 @@ body {
     background-color: #000;
     /* fallback behind the logo */
     background-image: url('images/white-wall-background.jpg');
-    background-repeat: repeat;
-    background-size: cover;
+    background-size: 100% auto;      /* fits full width, natural height */
+    background-position: top center; /* starts from the top */
+    background-repeat: repeat-y;     /* repeats vertically to fill height */
     /* scale logo to cover the viewport */
-    background-position: center center;
-    background-attachment: fixed;
     /* parallax-style on scroll */
-    overflow-x: hidden;
-}
-
-/* Fix for mobile */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;  /* ← this is the key fix */
-        background-size: cover;
-    }
 }
 
 a {
