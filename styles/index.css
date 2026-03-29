@@ -19,7 +19,7 @@
 .results-carousel .item {
   margin: 1rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 0rem;
   justify-content: center; /* Center horizontally */
   font-size: 0;
   background: var(--background-primary);
@@ -66,6 +66,7 @@
 .hero {
   position: relative;
   overflow: hidden;
+  padding: 0rem 0rem;
 }
 
 .hero.is-light {
@@ -79,8 +80,8 @@
 }
 
 .teaser .hero-body {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .teaser {
@@ -90,11 +91,11 @@
 /* Mobile Responsive Improvements */
 @media screen and (max-width: 768px) {
   .hero-body {
-    padding: 2rem 1rem;
+    padding: 0rem 0rem;
   }
 
   .publication-header .hero-body {
-    padding: 3rem 1rem 2rem;
+    padding: 0rem 0rem 0rem;
   }
 
   .publication-title {
@@ -137,7 +138,7 @@
   }
 
   .teaser .hero-body {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   .content.has-text-justified {
@@ -151,7 +152,7 @@
   }
 
   .hero-body {
-    padding: 1.5rem 0.75rem;
+    padding: 0rem 0rem;
   }
 
   .more-works-container {
