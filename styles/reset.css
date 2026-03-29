@@ -17,7 +17,8 @@ body {
     /* Full-screen logo background – image is in styles/images/image.png */
     background-color: #000;
     /* fallback behind the logo */
-    background-image: url('images/white-wall-background.jpg');
+    /* background-image: url('images/white-wall-background.jpg'); */
+    background-image: url('images/white_back_v3.png');
     background-size: 100% auto;      /* fits full width, natural height */
     background-position: top center; /* starts from the top */
     background-repeat: repeat-y;     /* repeats vertically to fill height */

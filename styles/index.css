@@ -9,6 +9,13 @@
   font-size: 2rem;
 }
 
+.section-heading h3 {
+  font-family: 'Beth Ellen', serif; 
+  color: #5a4a42;                   
+  font-size: 1.0rem;
+  margin-bottom: 1rem; /* Adjust this value to move it lower */
+}
+
 .results-carousel .item {
   margin: 1rem;
   overflow: hidden;
@@ -68,7 +75,7 @@
 }
 
 .hero-body {
-  padding: 4rem 1.5rem;
+  padding: 0rem 0rem;
 }
 
 .teaser .hero-body {
@@ -181,7 +188,7 @@
 /* Tablet Responsive */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .hero-body {
-    padding: 3rem 2rem;
+    padding: 0rem 0rem;
   }
 
   .publication-header .hero-body {
