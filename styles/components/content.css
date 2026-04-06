@@ -22,7 +22,7 @@
 
 .content-section h2 {
     font-size: 2rem;
-    color: #6b8e6b;
+    color: #454745;
     margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Amatic SC', serif;
@@ -32,10 +32,11 @@
 }
 
 .content-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 40rem;
     color: #5a4a42;
     text-align: center;
+    font-family: 'Antic Didone', serif;
+
 }
 
 @keyframes fadeIn {
