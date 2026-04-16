@@ -39,6 +39,14 @@
 
 }
 
+.content-section spec {
+    font-size: 1.3rem;
+    color: #725552;
+    text-align: center;
+    font-family: 'Beth Ellen', serif;
+    display: block;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
